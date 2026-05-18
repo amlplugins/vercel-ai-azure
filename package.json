@@ -1,0 +1,44 @@
+{
+  "name": "@amlplugins/vercel-ai-azure",
+  "version": "0.0.1",
+  "description": "Native @ai-sdk/azure SDK re-exported under the @amlplugins namespace — Vercel AI SDK Azure OpenAI provider — GPT-4o/o1/o3 via Azure deployments with Entra ID auth.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@ai-sdk/azure": "^3.0.65",
+    "ai": "^6.0.184"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amlplugins/vercel-ai-azure.git"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT"
+}
